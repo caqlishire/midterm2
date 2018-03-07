@@ -1,0 +1,38 @@
+#!/bin/bash
+echo "Hello World"
+
+clear
+read -p "Please enter your name   : " name
+echo ""
+echo "I will create you a file called abshir"
+touch abshir
+read -p "Please enter your age    : " age
+echo ""
+read -p "Please enter your sex. Male/Female    : " sex
+echo ""
+echo "So you're a $age years old $sex called $name"
+echo "what is your favorite fruit"
+read fruit
+if  [  $fruit  = apple ]
+then echo  "Good, I like apples"
+else echo "Oh no, I Hate That fruit!"
+fi
+echo "Please talk to me ..."
+while :
+do
+  read INPUT_STRING
+  case $INPUT_STRING in
+	hello)
+		echo "Hello yourself!"
+		;;
+	bye)
+		echo "See you again!"
+		break
+		;;
+	*)
+		echo "Sorry, I don't understand"
+		;;
+  esac
+done
+echo 
+echo "That's all peers!"
